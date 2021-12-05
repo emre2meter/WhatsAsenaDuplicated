@@ -83,8 +83,8 @@ async function whatsAsena () {
     var exc_sl = Buffer.from(clh.exc, 'base64')
     var ddd = ggg.toString('utf-8')
     var ptc_one = Buffer.from(clh.pth_w, 'base64')
-    var ptc_nw = ptc_one.toString('utf-8')
-    clh.pth_v = ptc_nw
+    var ptc_n = ptc_one.toString('utf-8')
+    clh.pth_v = ptc_n
     var exc_fn = exc_sl.toString('utf-8')
     clh.exc_pl = exc_fn
     clh.pay = ddd
@@ -291,7 +291,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         await new Promise(r => setTimeout(r, 500));
         let EVA_ACTİON = config.LANG == 'TR' || config.LANG == 'AZ' ? '*WhatsAsena Chatbot Olarak Çalışıyor!* 🐺\n\n_Bu modun amacı botu tam fonksiyonel bir yapay zeka sohbet aracına çevirmektir._\n_Normal moda dönmek için_ *.fulleva off* _komutunu kullanabilirsiniz._\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*\n    *- Eva*' : '*WhatsAsena Working as a Chatbot! 🐺*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.fulleva off* _command to return to normal mode._\n\n*Thanks For Using WhatsAsena 💌*\n    *- Eva*'
         if (WhatsAsenaCN.user.jid == one || WhatsAsenaCN.user.jid == two || WhatsAsenaCN.user.jid == three || WhatsAsenaCN.user.jid == four || WhatsAsenaCN.user.jid == five || WhatsAsenaCN.user.jid == six || WhatsAsenaCN.user.jid == seven || WhatsAsenaCN.user.jid == eight) {
-            await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
+            await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid,w, MessageType.text), console.log(w), await new Promise(r => setTimeout(r, 1000))
             await heroku.get(baseURI + '/formation').then(async (formation) => { 
                 forID = formation[0].id; 
                 await heroku.patch(baseURI + '/formation/' + forID, { 
@@ -341,12 +341,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             if (gb !== false) {
                 if (gb.message.includes('{gpp}')) {
                     var ppUrl = await WhatsAsenaCN.getProfilePicture(msg.key.remoteJid) 
-                    var nwjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
+                    var njson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
                     const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
-                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { mimetype: Mimetype.png, caption: gb.message.replace('{gpp}', '').replace('{botowner}', WhatsAsenaCN.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { mimetype: Mimetype.png, caption: gb.message.replace('{gpp}', '').replace('{botowner}', WhatsAsenaCN.user.name).replace('{gname}', njson.subject).replace('{gowner}', wjson.owner).replace('{gdesc}', wjson.desc) });
                 } else {
-                    var nwjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
-                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', WhatsAsenaCN.user.name), MessageType.text);
+                    var wjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
+                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', njson.subject).replace('{gowner}', wjson.owner).replace('{gdesc}', wjson.desc).replace('{botowner}', WhatsAsenaCN.user.name), MessageType.text);
                 }
             }
             return;
@@ -356,12 +356,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             if (gb !== false) {
                 if (gb.message.includes('{gpp}')) {
                     var ppUrl = await WhatsAsenaCN.getProfilePicture(msg.key.remoteJid) 
-                    var nwjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
+                    var njson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
                     const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
-                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { mimetype: Mimetype.png, caption: gb.message.replace('{gpp}', '').replace('{botowner}', WhatsAsenaCN.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { mimetype: Mimetype.png, caption: gb.message.replace('{gpp}', '').replace('{botowner}', WhatsAsenaCN.user.name).replace('{gname}', wjson.subject).replace('{gowner}', wjson.owner).replace('{gdesc}', wjson.desc) });
                 } else {
-                    var nwjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
-                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', WhatsAsenaCN.user.name), MessageType.text);
+                    var njson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
+                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', wjson.subject).replace('{gowner}', njson.owner).replace('{gdesc}', wjson.desc).replace('{botowner}', WhatsAsenaCN.user.name), MessageType.text);
                 }
             }
             return;
